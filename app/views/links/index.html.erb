@@ -1,0 +1,32 @@
+<% content_for :title, "Links" %>
+
+<div class="w-full">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-md inline-block" id="notice"><%= notice %></p>
+  <% end %>
+  <div class="flex justify-between items-center">
+    <h1 class="font-bold text-4xl p-3">Links</h1>
+    <%= link_to "New link", new_link_path, class: "rounded-md px-3.5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white block font-medium" %>
+  </div>  
+  <div id="links" class="flex flex-col items-center space-y-5 mt-8">
+    <% if @links.any? %>
+      <% @links.each do |link| %>
+        <div class="flex flex-col items-center border border-xl rounded-md p-5 w-200 text-center">
+          <div>
+            <strong class="block font-medium mb-1">Title:</strong>
+            <%= link.title %>
+          </div>
+          <div>
+            <strong class="block font-medium mb-1">Tiny URL:</strong>         
+            <%= link_to link.tiny_code, link.hyperlink, target: "_blank", class: "border border-xl rounded-md p-2" %>
+          </div>
+          <div class="mt-4">
+            <%= link_to "Show", link, class: "rounded-xl px-3.5 py-2 bg-gray-200 hover:bg-gray-400 inline-block font-medium" %>
+          </div>
+        </div>
+      <% end %>
+    <% else %>
+      <p class="text-center my-10">No links found.</p>
+    <% end %>
+  </div>
+</div>
