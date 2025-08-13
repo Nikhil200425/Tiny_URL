@@ -64,10 +64,10 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem 'devise'
+gem "devise"
 group :development, :test do
-  gem 'mailcatcher'
+  gem "mailcatcher"
 end
-gem 'actionview-encoded_mail_to'
-gem 'sidekiq'
-gem 'redis-rails'
+gem "actionview-encoded_mail_to"
+gem "sidekiq"
+gem "redis-rails"

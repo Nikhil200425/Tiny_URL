@@ -2,10 +2,10 @@ Rails.application.routes.draw do
   devise_for :users,
   controllers: {
     sessions: "users/sessions",
-    confirmations: 'devise/confirmations'
+    confirmations: "devise/confirmations"
   }
   resources :links
-  get '/:tiny_code', to: 'links#redirect_to_original'
+  get "/:tiny_code", to: "links#redirect_to_original"
   root "links#index"
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

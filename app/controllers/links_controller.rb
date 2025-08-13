@@ -56,7 +56,7 @@ class LinksController < ApplicationController
       format.html { redirect_to links_path, notice: "Link was successfully destroyed.", status: :see_other }
       format.json { head :no_content }
     end
-  end    
+  end
 
   def redirect_to_original
     link = Link.find_by(tiny_code: params[:tiny_code])
