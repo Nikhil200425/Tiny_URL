@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  devise_for :users,
+  controllers: {
+    sessions: "users/sessions",
+    confirmations: 'devise/confirmations'
+  }
   resources :links
   get '/:tiny_code', to: 'links#redirect_to_original'
   root "links#index"

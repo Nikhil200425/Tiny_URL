@@ -63,3 +63,11 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem 'devise'
+group :development, :test do
+  gem 'mailcatcher'
+end
+gem 'actionview-encoded_mail_to'
+gem 'sidekiq'
+gem 'redis-rails'
