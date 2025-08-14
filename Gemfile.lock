@@ -347,7 +347,7 @@ GEM
     skinny (0.2.2)
       eventmachine (~> 1.0)
       thin
-    solid_cable (3.0.11)
+    solid_cable (3.0.12)
       actioncable (>= 7.2)
       activejob (>= 7.2)
       activerecord (>= 7.2)
